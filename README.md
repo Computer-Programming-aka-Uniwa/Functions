@@ -55,7 +55,7 @@ This program demonstrates the recursive solution for the Towers of Hanoi problem
 
 ### 3. **Sine and Cosine Calculation using Taylor Series**
 
-##### `SinCosTaylor.c`
+#### `SinCosTaylor.c`
 
 This program calculates the sine and cosine of an angle (in radians) using the Taylor series expansion. The program uses multiple helper functions to calculate and validate the results.
 
@@ -146,7 +146,7 @@ gcc -o SinCosTaylor SinCosTaylor.c
 
 ### 3. **Υπολογισμός Ημίτονου και Συνημίτονου με Χρήση Σειράς Taylor**
 
-##### `SinCosTaylor.c`
+#### `SinCosTaylor.c`
 
 Αυτό το πρόγραμμα υπολογίζει το ημίτονο και το συνημίτονο μιας γωνίας (σε ακτίνια) χρησιμοποιώντας την επέκταση της σειράς Taylor. Το πρόγραμμα χρησιμοποιεί πολλές βοηθητικές συναρτήσεις για να υπολογίσει και να επικυρώσει τα αποτελέσματα.
 
