@@ -15,6 +15,8 @@ For the detailed Documentation, click the link:
 
 This repository contains several C programs that demonstrate the use of functions in C. Functions in C allow developers to break their code into reusable blocks, improving modularity, readability, and ease of maintenance. Each program in this repository focuses on different mathematical or logical problems solved using functions.
 
+---
+
 ## Course Information
 - **Course**: Computer Programming
 - **Semester**: 1
@@ -26,6 +28,8 @@ This repository contains several C programs that demonstrate the use of function
 - **Name**: Athanasiou Vasileios Evangelos
 - **Student ID**: ice19390005
 - **Status**: Undergraduate
+
+---
 
 ## Programs in this Repository
 
@@ -65,6 +69,16 @@ This program calculates the sine and cosine of an angle (in radians) using the T
   - `Cos(double)`: Calculates the cosine using the built-in `cos()` function.
   - `Taylor_C(double)`: Calculates cosine using the Taylor series expansion.
   - **Mathematical Functions**: The program uses mathematical functions, recursion, and floating-point arithmetic to compute values with high accuracy.
+
+---
+
+## Requirements
+
+- **C Compiler**: GCC or any standard C compiler.
+- **Operating System**: Linux/Windows/MacOS.
+- **Development Environment**: Command Line or IDE.
+
+---
 
 ## Installation and Usage
 
@@ -106,6 +120,8 @@ gcc -o SinCosTaylor SinCosTaylor.c
 
 Αυτό το αποθετήριο περιέχει αρκετά προγράμματα σε C που επιδεικνύουν τη χρήση συναρτήσεων. Οι συναρτήσεις στη C επιτρέπουν στους προγραμματιστές να χωρίσουν τον κώδικα τους σε επαναχρησιμοποιήσιμα μπλοκ, βελτιώνοντας την αρθρωτότητα, την αναγνωσιμότητα και την ευκολία συντήρησης. Κάθε πρόγραμμα σε αυτό το αποθετήριο επικεντρώνεται σε διαφορετικά μαθηματικά ή λογικά προβλήματα που λύνονται με τη χρήση συναρτήσεων.
 
+---
+
 ## Πληροφορίες Μαθήματος
 - **Μάθημα**: Προγραμματισμός Υπολογιστών
 - **Εξάμηνο**: 1
@@ -117,6 +133,8 @@ gcc -o SinCosTaylor SinCosTaylor.c
 - **Όνομα**: Αθανασίου Βασίλειος Ευάγγελος
 - **Αριθμός Μητρώου**: ice19390005
 - **Κατάσταση**: Προπτυχιακός
+
+---
 
 ## Προγράμματα σε αυτό το Αποθετήριο
 
@@ -156,6 +174,16 @@ gcc -o SinCosTaylor SinCosTaylor.c
   - `Cos(double)`: Υπολογίζει το συνημίτονο χρησιμοποιώντας την έτοιμη συνάρτηση `cos()`.
   - `Taylor_C(double)`: Υπολογίζει το συνημίτονο χρησιμοποιώντας τη σειρά Taylor.
   - **Μαθηματικές Συναρτήσεις**: Το πρόγραμμα χρησιμοποιεί μαθηματικές συναρτήσεις, αναδρομή και αριθμητικές πράξεις κινητής υποδιαστολής για να υπολογίσει τιμές με υψηλή ακρίβεια.
+
+---
+
+## Απαιτήσεις
+
+- **Μεταγλωττιστής C**: GCC ή οποιοσδήποτε συμβατικός μεταγλωττιστής C.
+- **Λειτουργικό Σύστημα**: Linux/Windows/MacOS.
+- **Περιβάλλον Ανάπτυξης**: Γραμμή εντολών ή IDE.
+
+---
 
 ## Εγκατάσταση και Χρήση
 
