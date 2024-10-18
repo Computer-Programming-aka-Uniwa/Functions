@@ -18,10 +18,10 @@ This repository contains several C programs that demonstrate the use of function
 ---
 
 ## Course Information
-- **Course**: Computer Programming
+- **Course**: [Computer Programming](https://ice.uniwa.gr/education/undergraduate/courses/computer-programming/)
 - **Semester**: 1
 - **Program**: [UNIWA](https://www.uniwa.gr/)
-- **Department**: [Information and Computer Engineering](https://ice.uniwa.gr/)
+- **Department**: [Informatics and Computer Engineering](https://ice.uniwa.gr/)
 - **Instructor**: [Georgios Meletiou](https://ice.uniwa.gr/emd_person/17562/)
 
 ## Student Information
