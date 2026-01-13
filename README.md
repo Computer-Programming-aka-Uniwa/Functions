@@ -44,7 +44,7 @@
 
 # Project Overview
 
-This project focuses on the implementation and documentation of independent subprograms (functions) in C to solve mathematical and logical problems. It specifically covers the calculation of trigonometric values using Taylor series and the recursive solution to the Towers of Hanoi game.
+This project focuses on the implementation and documentation of independent subprograms (functions) in C to solve mathematical and logical problems using Menu options for users to choose. It specifically covers the calculation of trigonometric values using Taylor series and the recursive solution to the Towers of Hanoi game.
 
 ---
 
