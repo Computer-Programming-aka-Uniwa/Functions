@@ -1,208 +1,246 @@
-![Flag](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/255px-Flag_of_the_United_Kingdom_%281-2%29.svg.png)
+<p align="center">
+  <img src="https://www.especial.gr/wp-content/uploads/2019/03/panepisthmio-dut-attikhs.png" alt="UNIWA" width="150"/>
+</p>
 
-# Functions in C Programming
-
-For the requested Assignment, click the link:
-[Assignment](Assignment/)
-
-For the Source Code, click the link:
-[Code](Code/)
-
-For the detailed Documentation, click the link:
-[Documentation](Documentation/)
-
-# Overview
-
-This repository contains several C programs that demonstrate the use of functions in C. Functions in C allow developers to break their code into reusable blocks, improving modularity, readability, and ease of maintenance. Each program in this repository focuses on different mathematical or logical problems solved using functions.
+<p align="center">
+  <strong>UNIVERSITY OF WEST ATTICA</strong><br>
+  SCHOOL OF ENGINEERING<br>
+  DEPARTMENT OF COMPUTER ENGINEERING AND INFORMATICS
+</p>
 
 ---
 
-## Course Information
-- **Course**: [Computer Programming](https://ice.uniwa.gr/education/undergraduate/courses/computer-programming/)
-- **Semester**: 1
-- **Program**: [UNIWA](https://www.uniwa.gr/)
-- **Department**: [Informatics and Computer Engineering](https://ice.uniwa.gr/)
-- **Instructor**: [Georgios Meletiou](https://ice.uniwa.gr/emd_person/17562/)
+<p align="center">
+  <strong>Computer Programming</strong>
+</p>
 
-## Student Information
-- **Name**: Athanasiou Vasileios Evangelos
-- **Student ID**: ice19390005
-- **Status**: Undergraduate
+<h1 align="center">
+  Subprograms
+</h1>
 
----
+<p align="center">
+  <strong>Vasileios Evangelos Athanasiou</strong><br>
+  Student ID: 19390005
+</p>
 
-## Programs in this Repository
+<p align="center">
+  <a href="https://github.com/Ath21" target="_blank">GitHub</a> ·
+  <a href="https://www.linkedin.com/in/vasilis-athanasiou-7036b53a4/" target="_blank">LinkedIn</a>
+</p>
 
-### 1. **Basic Arithmetic Operations and Factorial with Functions**
+<p align="center">
+  Supervisor: Georgios Meletiou, Laboratory Teaching Staff<br>
+</p>
 
-#### `Menu.c`
+<p align="center">
+  <a href="https://ice.uniwa.gr/en/emd_person/georgios-meletiou/" target="_blank">UNIWA Profile</a>
+</p>
 
-This program demonstrates basic arithmetic operations, power calculation, factorial calculation, and combinations using functions.
-
-- **Key Functions:**
-  - `Power(int, int)`: Calculates the power `A^B`.
-  - `Factorial(int)`: Calculates the factorial of a number.
-  - `Combinations(int, int)`: Calculates the number of combinations `A choose B`.
-  - `Check_Power(int, int)`, `Check_Factorial(int)`, `Check_Combinations(int, int)`: Validate and display results of operations.
-  - **Modular Approach**: Each operation is encapsulated in its own function, demonstrating how to break down complex tasks into smaller, reusable functions.
-
-### 2. **Towers of Hanoi Puzzle**
-
-#### `Hanoi.c`
-
-This program demonstrates the recursive solution for the Towers of Hanoi problem, which involves moving disks between poles following specific rules.
-
-- **Key Functions:**
-  - `Move_Disks(int, char, char, char)`: A recursive function that calculates the steps to move the disks from one pole to another.
-  - `Num_Min_Moves(int)`: Recursively calculates the minimum number of moves needed for the puzzle.
-  - **Recursion**: The program highlights how recursion is used in C to solve problems that can be divided into smaller, similar sub-problems.
-
-### 3. **Sine and Cosine Calculation using Taylor Series**
-
-#### `SinCosTaylor.c`
-
-This program calculates the sine and cosine of an angle (in radians) using the Taylor series expansion. The program uses multiple helper functions to calculate and validate the results.
-
-- **Key Functions:**
-  - `Sin(double)`: Calculates the sine of an angle using the built-in `sin()` function.
-  - `Taylor_S(double)`: Calculates sine using the Taylor series expansion.
-  - `Cos(double)`: Calculates the cosine using the built-in `cos()` function.
-  - `Taylor_C(double)`: Calculates cosine using the Taylor series expansion.
-  - **Mathematical Functions**: The program uses mathematical functions, recursion, and floating-point arithmetic to compute values with high accuracy.
+<p align="center">
+  Athens, December 2021
+</p>
 
 ---
 
-## Requirements
+# Project Overview
 
-- **C Compiler**: GCC or any standard C compiler.
-- **Operating System**: Linux/Windows/MacOS.
-- **Development Environment**: Command Line or IDE.
+This project focuses on the implementation and documentation of independent subprograms (functions) in C to solve mathematical and logical problems. It specifically covers the calculation of trigonometric values using Taylor series and the recursive solution to the Towers of Hanoi game.
 
 ---
 
-## Installation and Usage
+## Table of Contents
+
+
+| Section | Folder / File | Description |
+|------:|---------------|-------------|
+| 1 | `assign/` | Assignment material |
+| 1.1 | `assign/project5.png` | Assignment description / problem statement (English) |
+| 1.2 | `assign/εργασία5.png` | Assignment description / problem statement (Greek) |
+| 2 | `docs/` | Theoretical documentation |
+| 2.1 | `docs/Subprograms.pdf` | Functions and subprograms in C (English) |
+| 2.2 | `docs/Υποπρογράμματα.pdf` | Functions and subprograms in C (Greek) |
+| 3 | `src/` | Source code implementations |
+| 3.1 | `src/Hanoi.c` | Tower of Hanoi example using recursive function |
+| 3.2 | `src/Menu.c` | Menu-driven program demonstrating modular functions |
+| 3.3 | `src/SinCosTaylor.c` | Computing sine and cosine using Taylor series via functions |
+| 4 | `README.md` | Repository overview and instructions |
+
+---
+
+
+## 1. SinCosTaylor.c
+
+This program calculates the **sine and cosine** of an angle (in degrees) provided by the user.  
+It compares results from the standard **math.h** library with calculations from the **infinite Taylor series**.
+
+### Key Features
+
+- **Input Handling:** Reads an angle $\Omega$ in degrees and converts it to radians ($w$).  
+- **Trigonometric Calculations:**  
+  - **Library Functions:** `sin(w)` and `cos(w)` from `math.h`.  
+  - **Taylor Series:** Implements infinite series for sine and cosine:  
+
+    $$
+    \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots
+    $$  
+
+- **Precision Check:** Compares library and Taylor results using a minimal difference threshold (e.g., $0.0000009$).
+
+### File Structure & Libraries
+
+- `stdio.h` – Standard I/O (`printf`, `scanf`)  
+- `math.h` – Trigonometric functions and absolute value (`fabs`)  
+- `#define pi 3.14159` – Constant for degree-to-radian conversion  
+
+---
+
+## 2. Hanoi.c
+
+This program implements the **Towers of Hanoi** logic puzzle using recursion.
+
+### Key Features
+
+- **Disk Input:** Prompts the user for the number of disks.  
+- **Move Calculation:** Computes the minimum moves required:  
+
+  $$
+  2^n - 1
+  $$  
+
+- **Recursive Solution:** Implements `Move_Disks` to print the step-by-step movement of disks between posts A, B, and C.
+
+### Core Functions
+
+| Function | Purpose |
+|----------|---------|
+| `Read_num_Disks()` | Reads the number of disks from the user |
+| `Num_Min_Moves(int n)` | Computes the minimum move count for `n` disks |
+| `Move_Disks(int n, char A, char B, char C)` | Recursively prints the movement path of disks |
+
+---
+
+## 3. Menu.c
+
+The program implements a **loop** that repeatedly displays a menu until the user chooses to exit. It **tracks the total number of valid operations** performed during the session and prints this sum upon exiting.
+
+The program is modular and uses independent subroutines for specific tasks:
+
+### Input and UI Functions
+- `Title()`: Displays the program title and headers.  
+- `Read_A()` and `Read_B()`: Prompts the user to enter two integers, \(A\) and \(B\).  
+- `Exit()`: Handles termination of the menu loop and returns a count for the exit operation.
+
+### Mathematical Operations
+- **Power (\(A^B\))**  
+  - `Power(int, int)`: Calculates \(A^B\).  
+  - `Check_Power()` and `Check_Valid_Power()`: Validate and display results.
+
+- **Factorial (\(A!\) and \(B!\))**  
+  - `Factorial(int)`: Computes factorial.  
+  - `Check_Factorial_A()`, `Check_Factorial_B()`, and `Check_Factorial()`: Validate inputs (e.g., negative numbers) and display results.
+
+- **Combinations (\(A\) per \(B\))**  
+  - `Combinations(int, int)`: Calculates 
+$$
+\frac{A!}{B!(A-B)!}
+$$
+  
+  - Validates that \(A > B\) and both numbers are non-negative.
+
+### Menu Options
+
+When running, the user is presented with:
+
+1. Calculation of \(A^B\)  
+2. Calculation of \(A!\) and \(B!\)  
+3. Calculation of the number of combinations \(A\) per \(B\)  
+4. Exit  
+
+### Implementation Details
+
+- **Libraries**: `stdio.h` for input/output, `math.h` for mathematical functions.  
+- **Validation**: Ensures errors are caught (e.g., negative factorials or invalid combinations) and displays `"Error"` messages.  
+- **Operation Counter**: Tracks cumulative successful executions using `sum = m_P + m_F + m_C + m_E`, printed when the user exits.
+
+---
+
+# Installation & Setup Guide
+
+This repository contains **introductory laboratory material** for the  
+**Computer Programming** course at the **University of West Attica (UNIWA)**.
+
+---
+
+## Prerequisites
+
+### Required Software
+
+- **C Compiler**
+  - Recommended:
+    - **GCC** (Linux / macOS / Windows via MinGW or WSL)
+
+- **Text Editor or IDE**
+  - Visual Studio Code `(Recommended)`
+  - Code::Blocks
+  - Dev-C++
+  - CLion
+  - Any plain text editor
+
+### Supported Operating Systems
+- Windows
+- Linux `(Recommended)`
+- macOS
+
+---
+
+## Installation
 
 ### 1. Clone the Repository
+
+Clone the repository to your local machine:
+
 ```bash
 git clone https://github.com/Computer-Programming-aka-Uniwa/Functions.git
-cd Functions
 ```
 
-### 2. Compile
+#### Alternative (Without Git)
+
+- Open the repository URL in your browser
+- Click Code → Download ZIP
+- Extract the ZIP file to a local directory
+
+## Compiling & Running the Programs
+### 2. Navigate to Source Directory
 ```bash
-gcc -o Hanoi Hanoi.c
-gcc -o Menu Menu.c
-gcc -o SinCosTaylor SinCosTaylor.c
+cd Functions/src
 ```
 
-### 3. Run
+### 3. Compile the Programs
+```bash
+gcc Hanoi.c -o Hanoi
+gcc SinCosTaylor.c -o SinCosTaylor -lm
+gcc Menu.c -o Menu -lm
+```
+> `-lm` is required to link the math library
+
+### 4. Run the Programs
+Linux / macOS
 ```bash
 ./Hanoi
 ./Menu
 ./SinCosTaylor
 ```
-
-
-![Flag](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/255px-Flag_of_Greece.svg.png)
-
-# Συναρτήσεις στη Γλώσσα Προγραμματισμού C
-
-Για την ζητούμενη Εργασία, κάντε κλικ στον σύνδεσμο:
-[Assignment](Assignment/)
-
-Για τον Πηγαίο Κώδικα, κάντε κλικ στον σύνδεσμο:
-[Code](Code/)
-
-Για την αναλυτική Τεκμηρίωση, κάντε κλικ στον σύνδεσμο:
-[Documentation](Documentation/)
-
-# Επισκόπηση
-
-Αυτό το αποθετήριο περιέχει αρκετά προγράμματα σε C που επιδεικνύουν τη χρήση συναρτήσεων. Οι συναρτήσεις στη C επιτρέπουν στους προγραμματιστές να χωρίσουν τον κώδικα τους σε επαναχρησιμοποιήσιμα μπλοκ, βελτιώνοντας την αρθρωτότητα, την αναγνωσιμότητα και την ευκολία συντήρησης. Κάθε πρόγραμμα σε αυτό το αποθετήριο επικεντρώνεται σε διαφορετικά μαθηματικά ή λογικά προβλήματα που λύνονται με τη χρήση συναρτήσεων.
-
----
-
-## Πληροφορίες Μαθήματος
-- **Μάθημα**: Προγραμματισμός Υπολογιστών
-- **Εξάμηνο**: 1
-- **Πρόγραμμα Σπουδών**: [ΠΑΔΑ](https://www.uniwa.gr/)
-- **Τμήμα**: [Μηχανικών Πληροφορικής και Υπολογιστών](https://ice.uniwa.gr/)
-- **Διδάσκων**: [Γεώργιος Μελετίου](https://ice.uniwa.gr/emd_person/17562/)
-
-## Πληροφορίες Φοιτητή
-- **Όνομα**: Αθανασίου Βασίλειος Ευάγγελος
-- **Αριθμός Μητρώου**: ice19390005
-- **Κατάσταση**: Προπτυχιακός
-
----
-
-## Προγράμματα σε αυτό το Αποθετήριο
-
-### 1. **Βασικές Αριθμητικές Πράξεις και Παραγοντικό με Συναρτήσεις**
-
-#### `Menu.c`
-
-Αυτό το πρόγραμμα επιδεικνύει βασικές αριθμητικές πράξεις, υπολογισμό δύναμης, παραγοντικό και συνδυασμούς χρησιμοποιώντας συναρτήσεις.
-
-- **Βασικές Συναρτήσεις:**
-  - `Power(int, int)`: Υπολογίζει τη δύναμη `A^B`.
-  - `Factorial(int)`: Υπολογίζει το παραγοντικό ενός αριθμού.
-  - `Combinations(int, int)`: Υπολογίζει το πλήθος των συνδυασμών `A επιλέγουμε B`.
-  - `Check_Power(int, int)`, `Check_Factorial(int)`, `Check_Combinations(int, int)`: Επικυρώνουν και εμφανίζουν τα αποτελέσματα των πράξεων.
-  - **Αρθρωτή Προσέγγιση**: Κάθε λειτουργία είναι ενσωματωμένη στη δική της συνάρτηση, δείχνοντας πώς να διαχωρίζονται πολύπλοκες εργασίες σε μικρότερες, επαναχρησιμοποιήσιμες συναρτήσεις.
-
-### 2. **Το Παζλ των Πύργων του Ανόι**
-
-#### `Hanoi.c`
-
-Αυτό το πρόγραμμα επιδεικνύει τη λύση του προβλήματος των Πύργων του Ανόι χρησιμοποιώντας αναδρομή, όπου οι δίσκοι μετακινούνται μεταξύ των στυλών ακολουθώντας συγκεκριμένους κανόνες.
-
-- **Βασικές Συναρτήσεις:**
-  - `Move_Disks(int, char, char, char)`: Αναδρομική συνάρτηση που υπολογίζει τα βήματα για να μετακινήσει τους δίσκους από έναν στύλο σε άλλον.
-  - `Num_Min_Moves(int)`: Υπολογίζει αναδρομικά τον ελάχιστο αριθμό κινήσεων που απαιτείται για το παζλ.
-  - **Αναδρομή**: Το πρόγραμμα τονίζει πώς η αναδρομή χρησιμοποιείται στη C για την επίλυση προβλημάτων που μπορούν να διαιρεθούν σε μικρότερα, παρόμοια υποπροβλήματα.
-
-### 3. **Υπολογισμός Ημίτονου και Συνημίτονου με Χρήση Σειράς Taylor**
-
-#### `SinCosTaylor.c`
-
-Αυτό το πρόγραμμα υπολογίζει το ημίτονο και το συνημίτονο μιας γωνίας (σε ακτίνια) χρησιμοποιώντας την επέκταση της σειράς Taylor. Το πρόγραμμα χρησιμοποιεί πολλές βοηθητικές συναρτήσεις για να υπολογίσει και να επικυρώσει τα αποτελέσματα.
-
-- **Βασικές Συναρτήσεις:**
-  - `Sin(double)`: Υπολογίζει το ημίτονο μιας γωνίας χρησιμοποιώντας την έτοιμη συνάρτηση `sin()`.
-  - `Taylor_S(double)`: Υπολογίζει το ημίτονο χρησιμοποιώντας τη σειρά Taylor.
-  - `Cos(double)`: Υπολογίζει το συνημίτονο χρησιμοποιώντας την έτοιμη συνάρτηση `cos()`.
-  - `Taylor_C(double)`: Υπολογίζει το συνημίτονο χρησιμοποιώντας τη σειρά Taylor.
-  - **Μαθηματικές Συναρτήσεις**: Το πρόγραμμα χρησιμοποιεί μαθηματικές συναρτήσεις, αναδρομή και αριθμητικές πράξεις κινητής υποδιαστολής για να υπολογίσει τιμές με υψηλή ακρίβεια.
-
----
-
-## Απαιτήσεις
-
-- **Μεταγλωττιστής C**: GCC ή οποιοσδήποτε συμβατικός μεταγλωττιστής C.
-- **Λειτουργικό Σύστημα**: Linux/Windows/MacOS.
-- **Περιβάλλον Ανάπτυξης**: Γραμμή εντολών ή IDE.
-
----
-
-## Εγκατάσταση και Χρήση
-
-### 1. Κλωνοποίηση του Αποθετηρίου
+Windows
 ```bash
-git clone https://github.com/Computer-Programming-aka-Uniwa/Functions.git
-cd Functions
+Hanoi.exe
+Menu.exe
+SinCosTaylor.exe
 ```
 
-### 2. Μεταγλώττιση
-```bash
-gcc -o Hanoi Hanoi.c
-gcc -o Menu Menu.c
-gcc -o SinCosTaylor SinCosTaylor.c
-```
+---
 
-### 3. Εκτέλεση
-```bash
-./Hanoi
-./Menu
-./Sin
-```
+## Open the Documentation
+1. Navigate to the `docs/` directory
+2. Open the report corresponding to your preferred language:
+    - English: `Subprograms.pdf`
+    - Greek: `Υποπρογράμματα.pdf`
