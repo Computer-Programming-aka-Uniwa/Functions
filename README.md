@@ -93,7 +93,8 @@ This project focuses on the implementation and documentation of independent subp
 |     3.1 | `src/Hanoi.c`             | Tower of Hanoi example using recursive function             |
 |     3.2 | `src/Menu.c`              | Menu-driven program demonstrating modular functions         |
 |     3.3 | `src/SinCosTaylor.c`      | Computing sine and cosine using Taylor series via functions |
-|       4 | `README.md`               | Repository overview and instructions                        |
+|       4 | `README.md`               | Project documentation                                       |
+|       5 | `INSTALL.md`              | Usage instructions                                          |
 
 ---
 
